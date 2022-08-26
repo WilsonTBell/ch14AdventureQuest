@@ -25,7 +25,7 @@ namespace Quest
         }
 
         // This method will take an Adventurer object and make that Adventurer perform the challenge
-        public void RunChallenge(Adventurer adventurer)
+        public void RunChallenge(Adventurer adventurer, int successCounter)
         {
             Console.Write($"{_text}: ");
             string answer = Console.ReadLine();
@@ -40,6 +40,7 @@ namespace Quest
 
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;
+                successCounter++;
             }
             else
             {
